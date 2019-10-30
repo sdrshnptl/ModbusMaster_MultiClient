@@ -295,6 +295,18 @@ void ModbusMaster::clearTransmitBuffer()
 }
 
 
+/*
+ Change the remote modbus slave id.
+ */
+void ModbusMaster::setSlaveId(uint8_t slave_id)
+{
+  this->_u8MBSlave = slave_id;
+}
+
+
+
+
+
 /**
 Modbus function 0x01 Read Coils.
 
