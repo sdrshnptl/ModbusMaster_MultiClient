@@ -202,6 +202,7 @@ class ModbusMaster
     uint8_t available(void);
     uint16_t receive(void);
     
+    void setSlaveId(uint8_t);
     
     uint8_t  readCoils(uint16_t, uint16_t);
     uint8_t  readDiscreteInputs(uint16_t, uint16_t);
@@ -233,6 +234,7 @@ class ModbusMaster
     uint16_t* rxBuffer; // from Wire.h -- need to clean this up Rx
     uint8_t _u8ResponseBufferIndex;
     uint8_t _u8ResponseBufferLength;
+  
     
     // Modbus function codes for bit access
     static const uint8_t ku8MBReadCoils                  = 0x01; ///< Modbus function 0x01 Read Coils
